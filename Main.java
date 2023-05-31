@@ -28,7 +28,7 @@ public class Main{
                     break;
             }
 
-            Race.dwarf user  = new dwarf(subrace, size, age, name, tool);
+            Race Dwarf user  = new dwarf(subrace, size, age, name, tool);
 
         }
     scan.close();
