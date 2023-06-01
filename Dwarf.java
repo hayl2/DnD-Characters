@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class Race {
+public class Dwarf {
     private int age;
     private String ageCategory;
     private int size;
@@ -13,8 +13,12 @@ public class Race {
     private ArrayList <String> abilities = new ArrayList <String> ();
 
 
-    public String dwarf(String sub, int size, int age, String name, String tool){
-        
+    public Dwarf(String sub, int size, int age, String name, String tool){
+        this.sub = sub;
+        this.size = size;
+        this.age = age;
+        this.name = name;
+        this.tool = tool;
         //size category
         if (size > 5){
             size = 5;
@@ -50,10 +54,11 @@ public class Race {
             abilityScore += 2;
             abilities.add("Dwarven Armor Training");
         }
-
-        return "Character Created \nName: " + name + "\nSubrace: " + sub + "\nSize: " + size + "ft. " + sizeCategory + "\nAge: " + age + "years. " + ageCategory + "\nAbility Score: " + abilityScore + "\nSpeed: " + speed + "/nAbilities: " + abilities;
+    
+    }
         
-
+    public void String getDwarf(Dwarf dwarf){
+        return "Character Created \nName: " + name + "\nSubrace: " + sub + "\nSize: " + size + "ft. " + sizeCategory + "\nAge: " + age + "years. " + ageCategory + "\nAbility Score: " + abilityScore + "\nSpeed: " + speed + "/nAbilities: " + abilities; 
     }
 
 }
