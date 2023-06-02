@@ -19,6 +19,7 @@ public class Dwarf {
         this.age = age;
         this.name = name;
         this.tool = tool;
+        this.hitPoint = Dice.roll8(); 
         //size category
         if (size > 5){
             size = 5;
@@ -58,7 +59,7 @@ public class Dwarf {
     }
         
     public static String getDwarf(Dwarf dwarf){
-        return "Character Created \nName: " + name + "\nSubrace: " + sub + "\nSize: " + size + "ft. " + sizeCategory + "\nAge: " + age + "years. " + ageCategory + "\nAbility Score: " + abilityScore + "\nSpeed: " + speed + "/nAbilities: " + abilities; 
+        return "Character Created \nName: " + name + "\nSubrace: " + sub + "\nSize: " + size + "ft. " + sizeCategory + "\nAge: " + age + "years. " + ageCategory + "\nAbility Score: " + abilityScore + "\nSpeed: " + speed + "/nAbilities: " + abilities + "\nHit Points for first Level: " + hitPoint; 
     }
 
 }
