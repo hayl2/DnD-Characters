@@ -29,10 +29,12 @@ public class Main{
             }
 
             Dwarf user  = new Dwarf(subrace, size, age, name, tool);
-            System.out.println(getDwarf(user));
+            getDwarf(user);
         }
     scan.close();
     }
+
+    
 
    
 }

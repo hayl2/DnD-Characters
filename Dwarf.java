@@ -57,7 +57,7 @@ public class Dwarf {
     
     }
         
-    public void String getDwarf(Dwarf dwarf){
+    public static String getDwarf(Dwarf dwarf){
         return "Character Created \nName: " + name + "\nSubrace: " + sub + "\nSize: " + size + "ft. " + sizeCategory + "\nAge: " + age + "years. " + ageCategory + "\nAbility Score: " + abilityScore + "\nSpeed: " + speed + "/nAbilities: " + abilities; 
     }
 
