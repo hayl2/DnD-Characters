@@ -1,40 +1,49 @@
 import java.util.Scanner;
+import java.util.HashMap;
 public class Game{
     public static void main (String[] args){
-        Scanner scan = new Scanner(System.in); 
-        System.out.println("Hello, and welcome to DnD Character Developer!");
-        System.out.println("Let's start by chosing a race.");
-        System.out.println("Dwarf");
-        String race = scan.nextLine();
+        
+        //implementing scanner
+        Scanner scan = new Scanner(System.in);
 
-        if (race.equalsIgnoreCase("Dwarf")){
-            System.out.println("What would you like your name to be?");
-            String name = scan.nextLine();
-            System.out.println("How old would you like your character to be?");
-            int age = scan.nextInt();
-            System.out.println("What tool would you like to use?");
-            String tool = scan.nextLine();
-            System.out.println("How tall would you like your character to be?");
-            int size = scan.nextInt();
-            System.out.println("What subrace would you like to be?");
-            String subrace = scan.nextLine();
-            switch (subrace){
-                case "hill":
-                    break;
-                case "mountain":
-                    break;
-                default:
-                    System.out.println("That wasn't one of the options. You have been assined hill.");
-                    break;
-            }
+        //creating a hashmap
+        HashMap<String, String> exsisting = new HashMap<String, String>();
 
-            Dwarf user  = new Dwarf(subrace, size, age, name, tool);
-            getDwarf(user);
+        //introduction to game
+        System.out.println("Hello! Welcome to DnD character guide");
+        System.out.println("What would you like to do?");
+        System.out.println("a) View information for a race\nb) View information for a class\nc)Create a character\nd)Find a prexsisting character's race or class.");
+        
+        //what would the user like to do?
+        String str = scan.nextLine();
+
+        while (str.equals("a") == false && str.equals("b") == false && str.equals("c") == false && str.equals("d") == false){
+            System.out.println("It looks like that didn't match any options. Try again. ");
+            str = scan.nextLine();
         }
-    scan.close();
+        switch(str){
+            case "a":
+                System.out.println("What race would you like to view information for?");
+                //TODO
+                break;
+            case "b":
+                System.out.println("What class would you like to view information for?");
+                //TODO
+                break;
+            case "c":
+                System.out.println("What race would you like your character to be?");
+                //TODO
+                break;
+            default: 
+                System.out.println("What character would you like to view?");
+                //TODO
+                break;
+            
+            }
+        
+        
+        
+        //closing scanner to prevent resource leaks
+        scan.close();
     }
-
-    
-
-   
 }
