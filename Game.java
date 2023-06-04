@@ -35,10 +35,10 @@ public class Game{
                     
                     switch(subrace){
                         case "hill":
-                            Dwarf.hillDwarfStats();
+                            dwarf.hillDwarfStats();
                             break;
                         case "mountain":
-                            Dwarf.mountainDwarfStats();
+                            dwarf.mountainDwarfStats();
                             break;
                         default:
                             System.out.println("It looks like that didn't match an option. Restart and try again");

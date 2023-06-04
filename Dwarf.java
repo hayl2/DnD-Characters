@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class Dwarf {
+public class dwarf {
     
     private int abilityScore;
     private String size;
