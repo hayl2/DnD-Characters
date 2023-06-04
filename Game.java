@@ -3,6 +3,10 @@ import java.util.HashMap;
 public class Game{
     public static void main (String[] args){
         
+        //variables
+        String race;
+        String subrace;
+
         //implementing scanner
         Scanner scan = new Scanner(System.in);
 
@@ -24,7 +28,24 @@ public class Game{
         switch(str){
             case "a":
                 System.out.println("What race would you like to view information for?");
-                //TODO
+                race = scan.nextLine();
+                if (race.equalsIgnoreCase("Dwarf:")){
+                    System.out.println("What subrace of 'Dwarf' are you?");
+                    subrace = scan.nextLine();
+                    
+                    switch(subrace){
+                        case "hill":
+                            Dwarf.hillDwarfStats();
+                            break;
+                        case "mountain":
+                            Dwarf.mountainDwarfStats();
+                            break;
+                        default:
+                            System.out.println("It looks like that didn't match an option. Restart and try again");
+                            break;
+                    }
+
+                }
                 break;
             case "b":
                 System.out.println("What class would you like to view information for?");
