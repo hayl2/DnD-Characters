@@ -76,6 +76,10 @@ public class Game{
                             break;
                     }
                 }
+                else{
+                    System.out.println("Viewing human.");
+                    System.out.println(Human.humanStats());
+                }
                 break;
             case "b":
                 System.out.println("What class would you like to view information for?");

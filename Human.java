@@ -1,10 +1,20 @@
+import java.util.ArrayList;
+
 public class Human {
-    /*
-     * TODO
-     * Ability score += 1;
-     * Age - Adult hood at 18
-     * Size - 5 feet to 6 ft - Medium
-     * Base speed is 30
-     * Common and one other language of your choice
-     */
+    private static int abilityScore;
+    private static String size;
+    private static int speed;
+    private static ArrayList<String> abilities = new ArrayList<String>(); 
+
+    public static String humanStats(){
+        
+        abilityScore = 1;
+        size = "medium";
+        speed = 30;
+        abilities.add("Read, Speak and Write Common");
+        abilities.add("Proficiency in one skill");
+        abilities.add("Gain one feat");
+        
+        return "Ability Score: " + abilityScore + "\nSize: " + size + "\nSpeed: " + speed + "\nAbilities: " + abilities.toString();
+    }
 }

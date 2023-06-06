@@ -23,7 +23,7 @@ public class Dice {
         public int roll12(){
             return (int) (Math.random() * 12)+ 1;
         }
-    )
+    
         public int roll20(){
             return (int) (Math.random() * 20) + 1;
         }

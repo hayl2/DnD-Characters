@@ -2,7 +2,7 @@ import java.io.Serializable;
 import java.util.Scanner;
 
 public class CharCreator extends Game {
-    Scanner scan = new.Scanner(System.in);
+    Scanner scan = new Scanner(System.in);
 
     private static String name;
     private static String race;
@@ -14,7 +14,7 @@ public class CharCreator extends Game {
     System.out.println("What will your character's class be?");
     classDND = scan.nextline();
 
-    public Character (String name, String race, String class) {
+    public void Character (String name, String race, String class) {
         this.name=name;
         this.race=race;
         classDND=class;

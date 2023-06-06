@@ -1,11 +1,5 @@
 public class Bard {
-<<<<<<< Updated upstream
-    //CLASS
-    
-=======
-
->>>>>>> Stashed changes
-    //TODO
+  //TODO
     /*
      * Spells known: Depends on level. 
      * Hit dice = 1d8
