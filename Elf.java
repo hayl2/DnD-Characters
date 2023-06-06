@@ -1,12 +1,12 @@
 import java.util.ArrayList;
-public class Elf {
+public class elf {
 
     private static int abilityScore;
     private static String size;
     private static int speed;
     private static ArrayList<String> abilities = new ArrayList<String>(); 
 
-    public static String eighElfStats(){
+    public static String highElfStats(){
         
         abilityScore = 3;
         size = "medium";

@@ -46,7 +46,19 @@ public class Game{
                     }
 
                 }
-                if (race.equalsIgnoreCase(str))
+                if (race.equalsIgnoreCase("elf")){
+                    System.out.println("What subrace of 'elf' are you?");
+                    subrace = scan.nextLine();
+
+                    switch(subrace){
+                        case "high":
+                            System.out.println(elf.highElfStats());
+                            break;
+                        case "mountain":
+                            System.out.println(elf.woodElfStats());
+                    }
+
+                }
                 break;
             case "b":
                 System.out.println("What class would you like to view information for?");
