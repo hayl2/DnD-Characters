@@ -42,7 +42,7 @@ public class Game{
                     }
 
                 }
-                if (race.equalsIgnoreCase("elf")){
+                else if (race.equalsIgnoreCase("elf")){
                     System.out.println("What subrace of 'elf' are you?");
                     subrace = scan.nextLine();
 
@@ -52,8 +52,29 @@ public class Game{
                             break;
                         case "mountain":
                             System.out.println(Elf.woodElfStats());
+                            break;
+                        default:
+                            System.out.println("It looks like that didn't match any subraces. Restart and try again.");
+                            break;
                     }
 
+                }
+
+                else if (race.equalsIgnoreCase("halfling")){
+                    System.out.println("What subrace of 'halfling' are you?");
+                    subrace = scan.nextLine();
+
+                    switch(subrace){
+                        case "lightfoot":
+                            System.out.println(Halfling.lightfootHalflingStats());
+                            break;
+                        case "stout":
+                            System.out.println(Halfling.stoutHalflingStats());
+                            break;
+                        default:
+                            System.out.println("It looks like that didn't match any subraces. Restart and try again.");
+                            break;
+                    }
                 }
                 break;
             case "b":

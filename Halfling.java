@@ -1,22 +1,38 @@
+import java.util.ArrayList;
+
 public class Halfling {
-    /*
-     * TODO
-     * 
-     * Ability score +2;
-     * Age - adult = 20
-     * Size = 3 feet tall;
-     * Speed = 25 ft
-     * Lucky = can reroll a d20 if there is a 1 for attack, ability, or saving 
-     * Brave
-     * Halfling Nimbleness
-     * Languages = Common and halfling
-     * 
-     * Subraces - Lightfoot and Stout
-     * 
-     * Lightfoot - Ability score +1
-     * Naturally Stelthy - Can hide behind creatures one size larger than you
-     * 
-     * Stout = Ability score +1;
-     * Stout resiliance - resistance to poison damage
-     */
+    private static int abilityScore;
+    private static String size;
+    private static int speed;
+    private static ArrayList<String> abilities = new ArrayList<String>(); 
+
+    public static String lightfootHalflingStats(){
+        
+        abilityScore = 3;
+        size = "small";
+        speed = 25;
+        abilities.add("Lucky");
+        abilities.add("Brave");
+        abilities.add("halfling Nimbleness");
+        abilities.add("Trance");
+        abilities.add("Read, Speak and Write Common");
+        abilities.add("Read, Speak and Write Halfling");
+        abilities.add("Naturally Stealthy");
+        
+        return "Ability Score: " + abilityScore + "\nSize: " + size + "\nSpeed: " + speed + "\nAbilities: " + abilities.toString();
+    }
+
+    public static String stoutHalflingStats(){
+        size = "small";
+        abilityScore = 3;
+        speed = 25;
+        abilities.add("Lucky");
+        abilities.add("Brave");
+        abilities.add("halfling Nimbleness");
+        abilities.add("Trance");
+        abilities.add("Read, Speak and Write Common");
+        abilities.add("Read, Speak and Write Halfling");
+        abilities.add("Stout Resilience");
+        return "Ability Score: " + abilityScore + "\nSize: " + size + "\nSpeed: " + speed + "\nAbilities: " + abilities.toString();
+    }
 }
