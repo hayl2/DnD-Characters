@@ -14,12 +14,14 @@ public class CharCreator extends Game {
     System.out.println("What will your character's class be?");
     classDND = scan.nextline();
 
-<<<<<<< Updated upstream
-    return "You are " + name + ", a " + race + " in the " + classDND + " class.";
+    public Character (String name, String race, String class) {
+        this.name=name;
+        this.race=race;
+        classDND=class;
+
+    }
+    public String returnChar() {
+        return "You are " + name + ", a " + race + " in the " + classDND + " class.";
+    }
 }
-=======
-public Character (String name, String race, String class) {
-    this.race;
-    this.class;
-}
->>>>>>> Stashed changes
+
