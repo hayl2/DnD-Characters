@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 public class dwarf {
     
-    private int abilityScore;
-    private String size;
-    private int speed;
-    private ArrayList<String> abilities = new ArrayList<String>(); 
+    private static int abilityScore;
+    private static String size;
+    private static int speed;
+    private static ArrayList<String> abilities = new ArrayList<String>(); 
 
-    public String hillDwarfStats(){
+    public static String hillDwarfStats(){
         
         abilityScore = 3;
         size = "medium";
@@ -16,15 +16,16 @@ public class dwarf {
         abilities.add("Dwarven Combat Training");
         abilities.add("Tools proficiency");
         abilities.add("Stonecunning");
-        abilities.add("Read, Speak, Write Dwarvish");
+        abilities.add("Read, Speak, and Write Dwarvish");
         abilities.add("Read, Speak and Write Common");
         abilities.add("Hit Point increases by 1");
         abilities.add("Dwarven Toughness");
         
-        return "Ability Score: " + abilityScore + "\nSize: " + size + "\nSpeed: " + speed + "Abilities: " + abilities.toString();
+        return "Ability Score: " + abilityScore + "\nSize: " + size + "\nSpeed: " + speed + "\nAbilities: " + abilities.toString();
     }
 
-    public String mountainDwarfStats(){
+    public static String mountainDwarfStats(){
+        size = "medium";
         abilityScore = 4;
         speed = 25;
         abilities.add("Darkvision");
@@ -35,8 +36,8 @@ public class dwarf {
         abilities.add("Read, Speak, Write Dwarvish");
         abilities.add("Read, Speak and Write Common");
         abilities.add("Dwarven Armor Training");
-
-        return "Ability Score: " + abilityScore + "\nSize: " + size + "\nSpeed: " + speed + "Abilities: " + abilities.toString();
+        
+        return "Ability Score: " + abilityScore + "\nSize: " + size + "\nSpeed: " + speed + "\nAbilities: " + abilities.toString();
     }
 }
 

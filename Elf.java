@@ -1,28 +1,42 @@
+import java.util.ArrayList;
 public class Elf {
-    /*
-    TODO
-    * Ability score increases by 2
-     * Age - adult = 100
-     * From >5 to <6. Size = medium
-     * Speed = 30 ft
-     * Darkvision
-     * Key senses
-     * Fey ancestry
-     * Trance
-     * Languages - Common and elvish
-     * 
-     * Subraces - High, wood
-     * 
-     * High - Ability score +1;
-     * Elf Weapon training - Proficiency with longsword, shortsword, shortbow and longbow.
-     * Cantrip
-     * Extra Language
-     * 
-     * Wood - Ability score +1
-     * Elf weapon training. Proficiency with longsword, shortsword, shortbow, and longbow
-     * Fleet of Foot. Walking increases to 35 ft
-     * Mask of the Wild - Ability to hide in natural settings
-     * 
-     *
-     */
+
+    private static int abilityScore;
+    private static String size;
+    private static int speed;
+    private static ArrayList<String> abilities = new ArrayList<String>(); 
+
+    public static String eighElfStats(){
+        
+        abilityScore = 3;
+        size = "medium";
+        speed = 30;
+        abilities.add("Darkvision");
+        abilities.add("Keen Senses");
+        abilities.add("Fey Ancestry");
+        abilities.add("Trance");
+        abilities.add("Read, Speak, and Write Elvish");
+        abilities.add("Read, Speak and Write Common");
+        abilities.add("Elf Weapon Training");
+        abilities.add("Cantrip");
+        abilities.add("Read, Speak, and Write one extra language of your choice.");
+        
+        return "Ability Score: " + abilityScore + "\nSize: " + size + "\nSpeed: " + speed + "\nAbilities: " + abilities.toString();
+    }
+
+    public static String woodElfStats(){
+        size = "medium";
+        abilityScore = 3;
+        speed = 25;
+        abilities.add("Darkvision");
+        abilities.add("Keen Senses");
+        abilities.add("Fey Ancestry");
+        abilities.add("Trance");
+        abilities.add("Read, Speak, and Write Elvish");
+        abilities.add("Read, Speak and Write Common");
+        abilities.add("Elf Weapon Training");
+        abilities.add("Fleet Of Foot");
+        abilities.add("Mask of the Wild");
+        return "Ability Score: " + abilityScore + "\nSize: " + size + "\nSpeed: " + speed + "\nAbilities: " + abilities.toString();
+    }
 }

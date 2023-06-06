@@ -29,16 +29,16 @@ public class Game{
             case "a":
                 System.out.println("What race would you like to view information for?");
                 race = scan.nextLine();
-                if (race.equalsIgnoreCase("Dwarf:")){
+                if (race.equalsIgnoreCase("Dwarf")){
                     System.out.println("What subrace of 'Dwarf' are you?");
                     subrace = scan.nextLine();
                     
                     switch(subrace){
                         case "hill":
-                            dwarf.hillDwarfStats();
+                            System.out.println(dwarf.hillDwarfStats());
                             break;
-                        case "mountain":
-                            dwarf.mountainDwarfStats();
+                        case "mountaian":
+                            System.out.println(dwarf.mountainDwarfStats());
                             break;
                         default:
                             System.out.println("It looks like that didn't match an option. Restart and try again");
@@ -46,6 +46,7 @@ public class Game{
                     }
 
                 }
+                if (race.equalsIgnoreCase(str))
                 break;
             case "b":
                 System.out.println("What class would you like to view information for?");
