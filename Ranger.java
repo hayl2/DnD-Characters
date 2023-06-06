@@ -1,5 +1,7 @@
 public class Ranger {
     /* 
+
+    * CLASS
      * TODO
      * Hit Points = 1d10
      * Proficiencies - Light armor, medium armor, shields

@@ -1,5 +1,8 @@
 public class Rogue {
     /*
+     * CLASS
+     * 
+     * 
      * TODO
      * 1d8 per level
      * Proficiencies - light armor

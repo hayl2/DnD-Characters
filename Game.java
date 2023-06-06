@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.HashMap;
 public class Game{
     public static void main (String[] args){
         
@@ -9,9 +8,6 @@ public class Game{
 
         //implementing scanner
         Scanner scan = new Scanner(System.in);
-
-        //creating a hashmap
-        HashMap<String, String> exsisting = new HashMap<String, String>();
 
         //introduction to game
         System.out.println("Hello! Welcome to DnD character guide");
@@ -35,10 +31,10 @@ public class Game{
                     
                     switch(subrace){
                         case "hill":
-                            System.out.println(dwarf.hillDwarfStats());
+                            System.out.println(Dwarf.hillDwarfStats());
                             break;
                         case "mountaian":
-                            System.out.println(dwarf.mountainDwarfStats());
+                            System.out.println(Dwarf.mountainDwarfStats());
                             break;
                         default:
                             System.out.println("It looks like that didn't match an option. Restart and try again");

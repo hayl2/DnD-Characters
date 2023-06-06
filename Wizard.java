@@ -1,5 +1,7 @@
 public class Wizard {
     /*
+     * CLASS
+     * 
      * TODO
      * Hit-dice:
      * 1d6 per level

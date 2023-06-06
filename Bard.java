@@ -1,4 +1,6 @@
 public class Bard {
+    //CLASS
+    
     //TODO
     /*
      * Spells known: Depends on level. 
