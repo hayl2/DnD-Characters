@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class elf {
+public class Elf {
 
     private static int abilityScore;
     private static String size;
@@ -15,7 +15,6 @@ public class elf {
         abilities.add("Keen Senses");
         abilities.add("Fey Ancestry");
         abilities.add("Trance");
-        abilities.add("Read, Speak, and Write Elvish");
         abilities.add("Read, Speak and Write Common");
         abilities.add("Elf Weapon Training");
         abilities.add("Cantrip");

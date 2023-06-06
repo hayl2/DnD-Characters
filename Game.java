@@ -52,10 +52,10 @@ public class Game{
 
                     switch(subrace){
                         case "high":
-                            System.out.println(elf.highElfStats());
+                            System.out.println(Elf.highElfStats());
                             break;
                         case "mountain":
-                            System.out.println(elf.woodElfStats());
+                            System.out.println(Elf.woodElfStats());
                     }
 
                 }
