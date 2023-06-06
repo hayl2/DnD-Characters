@@ -1,6 +1,10 @@
 public class Bard {
+<<<<<<< Updated upstream
     //CLASS
     
+=======
+
+>>>>>>> Stashed changes
     //TODO
     /*
      * Spells known: Depends on level. 

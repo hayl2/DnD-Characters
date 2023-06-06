@@ -1,7 +1,11 @@
 public class Wizard {
     /*
+<<<<<<< Updated upstream
      * CLASS
      * 
+=======
+    
+>>>>>>> Stashed changes
      * TODO
      * Hit-dice:
      * 1d6 per level
