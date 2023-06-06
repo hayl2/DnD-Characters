@@ -27,7 +27,7 @@ public class elf {
     public static String woodElfStats(){
         size = "medium";
         abilityScore = 3;
-        speed = 25;
+        speed = 30;
         abilities.add("Darkvision");
         abilities.add("Keen Senses");
         abilities.add("Fey Ancestry");
