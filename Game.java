@@ -18,11 +18,16 @@ public class Game{
         //what would the user like to do?
         String str = scan.nextLine();
 
+        //Start of while loop
         while (str.equals("a") == false && str.equals("b") == false && str.equals("c") == false && str.equals("d") == false){
             System.out.println("It looks like that didn't match any options. Try again. ");
             str = scan.nextLine();
         }
+
+        //checking cases
         switch(str){
+
+            //want to view race info
             case "a":
                 System.out.println("What race would you like to view information for?");
                 race = scan.nextLine();
@@ -82,6 +87,7 @@ public class Game{
                     System.out.println(Human.humanStats());
                 }
                 break;
+            // want to view class info
             case "b":
                 System.out.println("What class would you like to view information for?");
                 classDnD = scan.nextLine();
@@ -89,25 +95,30 @@ public class Game{
                     System.out.println(Wizard.wizardStats());
                 }
                 else if (classDnD.equalsIgnoreCase("bard")){
-                    System.out.println();
+                    System.out.println(Bard.bardStats());
                 }
                 else if (classDnD.equalsIgnoreCase("Rogue")){
-                    System.out.println();
+                    System.out.println(Rogue.rogueStats());
                 }
                 else if (classDnD.equalsIgnoreCase("Ranger")){
-                    System.out.println();   
+                    System.out.println(Ranger.rangerStats());   
                 }
                 break;
+
+            //want to create character
             case "c":
                 System.out.println("What race would you like your character to be?");
                 //TODO
                 break;
+            
+                //view characters
             default: 
                 System.out.println("What character would you like to view?");
                 //TODO
                 break;
             
             }
+
         
         
         

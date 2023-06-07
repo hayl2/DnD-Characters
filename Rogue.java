@@ -1,15 +1,22 @@
-public class Rogue {
-    /*
-     * CLASS
-     * 
-     * 
-     * TODO
-     * 1d8 per level
-     * Proficiencies - light armor
-     * Simple weapons, hand crossbows, longswords, rapiers, shortswords
-     * Thieves' Tools
-     * Dexterity, Intelligence
-     * Choose FOUR of Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Preformance, Persuasion, Slight of hand, Stealth
-     * 
-     */
+import java.util.ArrayList;
+public class Rogue {      
+    private static int roll;
+    private static int hitPoints;
+    private static ArrayList<String> proficiencies = new ArrayList<String>(); 
+     
+    public static String rogueStats(){
+             
+        roll = Dice.roll8();
+        hitPoints = 8;
+        proficiencies.add("Armor");
+        proficiencies.add("Weapons");
+        proficiencies.add("Tools");
+        proficiencies.add("Intelligence, Dexterity");
+        proficiencies.add("Four of: Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, Stealth");
+    
+            
+             
+        return "Hit Dice: " + roll + "\nHit Points (Plus Constitution Modifier): " + hitPoints + "\nProficiencies: " + proficiencies.toString();
+    }
+
 }
