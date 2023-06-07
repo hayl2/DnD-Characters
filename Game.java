@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 public class Game{
     public static void main (String[] args){
         
@@ -40,7 +40,7 @@ public class Game{
                         case "hill":
                             System.out.println(Dwarf.hillDwarfStats());
                             break;
-                        case "mountaian":
+                        case "mountain":
                             System.out.println(Dwarf.mountainDwarfStats());
                             break;
                         default:
@@ -115,8 +115,9 @@ public class Game{
                 System.out.println("What would you like to name your character?");
                 name = scan.nextLine();
 
-                System.out.println(CharCreator.Character(name, race, classDnD));
-                
+                CharCreator.addCharacter(name, race, classDnD);
+                System.out.println(CharCreator.getMapString());
+                CharCreator.getMap().save();
                 break;
             
                 //view characters
@@ -124,6 +125,8 @@ public class Game{
                 System.out.println("What character would you like to view?");
                 name = scan.nextLine();
                 System.out.println("Looking for " + name);
+                
+                
                 
                 break;
             
