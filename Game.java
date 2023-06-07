@@ -4,7 +4,8 @@ public class Game{
         
         //variables
         String race;
-        String subrace;
+        String subrace = "";
+        String classDnD;
 
         //implementing scanner
         Scanner scan = new Scanner(System.in);
@@ -83,7 +84,19 @@ public class Game{
                 break;
             case "b":
                 System.out.println("What class would you like to view information for?");
-                //TODO
+                classDnD = scan.nextLine();
+                if(classDnD.equalsIgnoreCase("Wizard")){
+                    System.out.println(Wizard.wizardStats());
+                }
+                else if (classDnD.equalsIgnoreCase("bard")){
+                    System.out.println();
+                }
+                else if (classDnD.equalsIgnoreCase("Rogue")){
+                    System.out.println();
+                }
+                else if (classDnD.equalsIgnoreCase("Ranger")){
+                    System.out.println();   
+                }
                 break;
             case "c":
                 System.out.println("What race would you like your character to be?");
