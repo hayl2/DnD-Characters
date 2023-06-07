@@ -115,14 +115,16 @@ public class Game{
                 System.out.println("What would you like to name your character?");
                 name = scan.nextLine();
 
-                System.out.print(CharCreator.Character(name, race, classDnD));
+                System.out.println(CharCreator.Character(name, race, classDnD));
                 
                 break;
             
                 //view characters
             default: 
                 System.out.println("What character would you like to view?");
-                //TODO
+                name = scan.nextLine();
+                System.out.println("Looking for " + name);
+                
                 break;
             
             }
