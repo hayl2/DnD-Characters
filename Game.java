@@ -4,8 +4,9 @@ public class Game{
         
         //variables
         String race;
-        String subrace = "";
+        String subrace;
         String classDnD;
+        String name;
 
         //implementing scanner
         Scanner scan = new Scanner(System.in);
@@ -108,7 +109,14 @@ public class Game{
             //want to create character
             case "c":
                 System.out.println("What race would you like your character to be?");
-                //TODO
+                race = scan.nextLine();
+                System.out.println("What class would you like your character to be?");
+                classDnD = scan.nextLine();
+                System.out.println("What would you like to name your character?");
+                name = scan.nextLine();
+
+                System.out.print(CharCreator.Character(name, race, classDnD));
+                
                 break;
             
                 //view characters
