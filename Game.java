@@ -1,42 +1,45 @@
 import java.util.*;
-public class Game{
-    public static void main (String[] args){
-        
-        //variables
+
+public class Game {
+    public static void main(String[] args) {
+
+        // variables
         String race;
         String subrace;
         String classDnD;
         String name;
 
-        //implementing scanner
+        // implementing scanner
         Scanner scan = new Scanner(System.in);
 
-        //introduction to game
+        // introduction to game
         System.out.println("Hello! Welcome to DnD character guide");
         System.out.println("What would you like to do?");
-        System.out.println("a) View information for a race\nb) View information for a class\nc)Create a character\nd)Find a prexsisting character's race or class.");
-        
-        //what would the user like to do?
+        System.out.println(
+                "a) View information for a race\nb) View information for a class\nc)Create a character\nd)Find a prexsisting character's race or class.");
+
+        // what would the user like to do?
         String str = scan.nextLine();
 
-        //Start of while loop
-        while (str.equals("a") == false && str.equals("b") == false && str.equals("c") == false && str.equals("d") == false){
+        // Start of while loop
+        while (str.equals("a") == false && str.equals("b") == false && str.equals("c") == false
+                && str.equals("d") == false) {
             System.out.println("It looks like that didn't match any options. Try again. ");
             str = scan.nextLine();
         }
 
-        //checking cases
-        switch(str){
+        // checking cases
+        switch (str) {
 
-            //want to view race info
+            // want to view race info
             case "a":
                 System.out.println("What race would you like to view information for?");
                 race = scan.nextLine();
-                if (race.equalsIgnoreCase("Dwarf")){
+                if (race.equalsIgnoreCase("Dwarf")) {
                     System.out.println("What subrace of 'Dwarf' are you?");
                     subrace = scan.nextLine();
-                    
-                    switch(subrace){
+
+                    switch (subrace) {
                         case "hill":
                             System.out.println(Dwarf.hillDwarfStats());
                             break;
@@ -48,12 +51,11 @@ public class Game{
                             break;
                     }
 
-                }
-                else if (race.equalsIgnoreCase("elf")){
+                } else if (race.equalsIgnoreCase("elf")) {
                     System.out.println("What subrace of 'elf' are you?");
                     subrace = scan.nextLine();
 
-                    switch(subrace){
+                    switch (subrace) {
                         case "high":
                             System.out.println(Elf.highElfStats());
                             break;
@@ -67,11 +69,11 @@ public class Game{
 
                 }
 
-                else if (race.equalsIgnoreCase("halfling")){
+                else if (race.equalsIgnoreCase("halfling")) {
                     System.out.println("What subrace of 'halfling' are you?");
                     subrace = scan.nextLine();
 
-                    switch(subrace){
+                    switch (subrace) {
                         case "lightfoot":
                             System.out.println(Halfling.lightfootHalflingStats());
                             break;
@@ -82,8 +84,7 @@ public class Game{
                             System.out.println("It looks like that didn't match any subraces. Restart and try again.");
                             break;
                     }
-                }
-                else{
+                } else {
                     System.out.println("Viewing human.");
                     System.out.println(Human.humanStats());
                 }
@@ -92,21 +93,18 @@ public class Game{
             case "b":
                 System.out.println("What class would you like to view information for?");
                 classDnD = scan.nextLine();
-                if(classDnD.equalsIgnoreCase("Wizard")){
+                if (classDnD.equalsIgnoreCase("Wizard")) {
                     System.out.println(Wizard.wizardStats());
-                }
-                else if (classDnD.equalsIgnoreCase("bard")){
+                } else if (classDnD.equalsIgnoreCase("bard")) {
                     System.out.println(Bard.bardStats());
-                }
-                else if (classDnD.equalsIgnoreCase("Rogue")){
+                } else if (classDnD.equalsIgnoreCase("Rogue")) {
                     System.out.println(Rogue.rogueStats());
-                }
-                else if (classDnD.equalsIgnoreCase("Ranger")){
-                    System.out.println(Ranger.rangerStats());   
+                } else if (classDnD.equalsIgnoreCase("Ranger")) {
+                    System.out.println(Ranger.rangerStats());
                 }
                 break;
 
-            //want to create character
+            // want to create character
             case "c":
                 System.out.println("What race would you like your character to be?");
                 race = scan.nextLine();
@@ -117,25 +115,20 @@ public class Game{
 
                 CharCreator.addCharacter(name, race, classDnD);
                 System.out.println(CharCreator.getMapString());
-                CharCreator.getMap().save();
+                //CharCreator.getMap().save();
                 break;
-            
-                //view characters
-            default: 
+
+            // view characters
+            default:
                 System.out.println("What character would you like to view?");
                 name = scan.nextLine();
                 System.out.println("Looking for " + name);
-                
-                
-                
-                break;
-            
-            }
 
-        
-        
-        
-        //closing scanner to prevent resource leaks
+                break;
+
+        }
+
+        // closing scanner to prevent resource leaks
         scan.close();
     }
 }

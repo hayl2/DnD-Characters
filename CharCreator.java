@@ -18,20 +18,19 @@ public class CharCreator implements Serializable {
         map.addCharacterEntry(name, list);
     }
 
-    
     public static String getMapString() {
         String returnString = "\n";
-        for (String name : map.getCharacters().keySet()){
+        for (String name : map.getCharacters().keySet()) {
             returnString += name;
-            for (int i = 0; i < map.get(name).size(); i++){
+            for (int i = 0; i < map.(name).size(); i++) {
                 returnString += "\t" + map.get(name).get(i) + "\n";
             }
         }
-        
-        return returnString;
+
+        return returnString + "     " + map.toString();
     }
 
-    public static HashMap<String, ArrayList> getMap(){
+    public static HashMap<String, ArrayList> getMap() {
         return map;
     }
 
@@ -68,9 +67,9 @@ public class CharCreator implements Serializable {
     }
 
     private static HashMap<String, ArrayList> initializeMap() {
-        if (map == null){
+        if (map == null) {
             map = restore();
-            if (map == null){
+            if (map == null) {
                 map = new HashMap<String, ArrayList>();
             }
         }

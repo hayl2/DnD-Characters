@@ -15,4 +15,9 @@ public class CharacterList{
         characters.put(name, characterInfo);
     }
 
+    public boolean no(){
+        return false;
+    }
+
+
 }
