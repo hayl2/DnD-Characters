@@ -10,7 +10,7 @@ public class CharCreator implements Serializable {
     private static String fileName = "characters.ser";
 
     public static void addCharacter(String userName, String userRace, String userClassDnD) {
-        name = userName;
+        name = userName;us
         race = userRace;
         classDnD = userClassDnD;
         list.add(race);
