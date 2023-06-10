@@ -110,8 +110,20 @@ public class Game {
             case "c":
                 System.out.println("What race would you like your character to be?");
                 race = scan.nextLine();
+                while (race.equals("dwarf") == false && race.equals("elf") == false && race.equals("halfling") == false
+                        && str.equals("human") == false) {
+                    System.out.println("It looks like that didn't match any options. Try again. ");
+                    race = scan.nextLine();
+                }
+
                 System.out.println("What class would you like your character to be?");
                 classDnD = scan.nextLine();
+                while (classDnD.equals("bard") == false && classDnD.equals("ranger") == false
+                        && classDnD.equals("rogue") == false
+                        && classDnD.equals("wizard") == false) {
+                    System.out.println("It looks like that didn't match any options. Try again. ");
+                    classDnD = scan.nextLine();
+                }
                 System.out.println("What would you like to name your character?");
                 name = scan.nextLine();
 
@@ -125,14 +137,13 @@ public class Game {
             // view characters
             default:
 
-                System.out.println(CharCreator.restore().toString());
                 System.out.println("What character would you like to view?");
                 name = scan.nextLine();
                 System.out.println("Looking for " + name);
                 HashMap<String, ArrayList> map = CharCreator.restore();
                 if (map.containsKey(name)) {
 
-                    System.out.println("Found: " + name + " Race and Class: " + map.get(name));
+                    System.out.println("Found: " + name + ", Race and Class: " + map.get(name));
                     break;
                 } else {
                     System.out.println(map.containsKey(name));
