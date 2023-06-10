@@ -14,7 +14,9 @@ public class Game {
 
         // introduction to game
         System.out.println("Hello! Welcome to DnD character guide");
+
         System.out.println("What would you like to do?");
+
         System.out.println(
                 "a) View information for a race\nb) View information for a class\nc)Create a character\nd)Find a prexsisting character's race or class.");
 
@@ -113,22 +115,34 @@ public class Game {
                 System.out.println("What would you like to name your character?");
                 name = scan.nextLine();
 
-                CharCreator.addCharacter(name, race, classDnD);
-                System.out.println(CharCreator.getMapString());
-                //CharCreator.getMap().save();
+                CharCreator charCreator = new CharCreator();
+
+                charCreator.addCharacter(name, race, classDnD);
+                System.out.println(charCreator.getMapString());
+                charCreator.save();
                 break;
 
             // view characters
             default:
+
+                System.out.println(CharCreator.restore().toString());
                 System.out.println("What character would you like to view?");
                 name = scan.nextLine();
                 System.out.println("Looking for " + name);
+                HashMap<String, ArrayList> map = CharCreator.restore();
+                if (map.containsKey(name)) {
 
-                break;
+                    System.out.println("Found: " + name + " Race and Class: " + map.get(name));
+                    break;
+                } else {
+                    System.out.println(map.containsKey(name));
+                    System.out.println("Name not found.");
+                    break;
+                }
+
+                // closing scanner to prevent resource leaks
 
         }
-
-        // closing scanner to prevent resource leaks
         scan.close();
     }
 }

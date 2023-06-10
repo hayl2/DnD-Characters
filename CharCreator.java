@@ -1,34 +1,67 @@
 import java.io.*;
 import java.util.*;
 
-public class CharCreator implements Serializable {
-    private static ArrayList<String> list = new ArrayList<String>();
-    private static String name;
-    private static String race;
-    private static String classDnD;
-    private static CharacterList map = new CharacterList(initializeMap());
+/*
+public class CharCreator{
+    private ArrayList<String> list = new ArrayList<String>();
+    private String name;
+    private String race;
+    private String classDnD;
+    private HashMap<String, ArrayList> map = initializeMap();
     private static String fileName = "characters.ser";
 
-    public static void addCharacter(String userName, String userRace, String userClassDnD) {
-        name = userName;us
+    
+    public void addCharacter (String name, String race, String classDnD){
+        this.name = name;
+        this.race = race;
+        this.classDnD = classDnD;
+
+        if (map == null){
+            initializeMap();
+        }
+
+        else{
+            list.add(race);
+            list.add(classDnD);
+            map.put(name, list);
+        }
+
+        CharacterList newList = new CharacterList(map);
+    }
+
+
+ */
+
+public class CharCreator implements Serializable {
+    private ArrayList<String> list = new ArrayList<String>();
+    private String name;
+    private String race;
+    private String classDnD;
+    private static HashMap<String, ArrayList> map = initializeMap();
+    private static String fileName = "characters.ser";
+
+    public void addCharacter(String userName, String userRace, String userClassDnD) {
+        name = userName;
         race = userRace;
         classDnD = userClassDnD;
         list.add(race);
         list.add(classDnD);
-        map.addCharacterEntry(name, list);
+        map.put(name, list);
+        CharacterList newList = new CharacterList(map);
     }
 
-    public static String getMapString() {
-        String returnString = "\n";
-        for (String name : map.getCharacters().keySet()) {
-            returnString += name;
-            for (int i = 0; i < map.(name).size(); i++) {
-                returnString += "\t" + map.get(name).get(i) + "\n";
-            }
-        }
+    public String getMapString() {
+        // String returnString = "\n";
 
-        return returnString + "     " + map.toString();
+        return map.toString();
+
+        // returnString += name;
+        // for (int i = 0; i < map.size(); i++) {
+        // returnString += "\t" + map.get(name).get(i) + "\n";
+        // }
     }
+
+    // return returnString + " " + map.toString();
 
     public static HashMap<String, ArrayList> getMap() {
         return map;
@@ -39,7 +72,7 @@ public class CharCreator implements Serializable {
             FileOutputStream fos = new FileOutputStream(fileName);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
 
-            oos.writeObject(this);
+            oos.writeObject(map);
             oos.close();
             fos.close();
             return true;
@@ -53,10 +86,12 @@ public class CharCreator implements Serializable {
     }
 
     public static HashMap<String, ArrayList> restore() {
+        HashMap<String, ArrayList> retrivedMap = new HashMap<String, ArrayList>();
+        retrivedMap = null;
         try {
             FileInputStream fis = new FileInputStream(fileName);
             ObjectInputStream ois = new ObjectInputStream(fis);
-            HashMap<String, ArrayList> retrivedMap = (HashMap<String, ArrayList>) ois.readObject();
+            retrivedMap = (HashMap<String, ArrayList>) ois.readObject();
             ois.close();
             fis.close();
 
@@ -66,7 +101,7 @@ public class CharCreator implements Serializable {
         }
     }
 
-    private static HashMap<String, ArrayList> initializeMap() {
+    public static HashMap<String, ArrayList> initializeMap() {
         if (map == null) {
             map = restore();
             if (map == null) {
