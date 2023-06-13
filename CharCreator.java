@@ -1,36 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-/*
-public class CharCreator{
-    private ArrayList<String> list = new ArrayList<String>();
-    private String name;
-    private String race;
-    private String classDnD;
-    private HashMap<String, ArrayList> map = initializeMap();
-    private static String fileName = "characters.ser";
 
-    
-    public void addCharacter (String name, String race, String classDnD){
-        this.name = name;
-        this.race = race;
-        this.classDnD = classDnD;
-
-        if (map == null){
-            initializeMap();
-        }
-
-        else{
-            list.add(race);
-            list.add(classDnD);
-            map.put(name, list);
-        }
-
-        CharacterList newList = new CharacterList(map);
-    }
-
-
- */
 
 public class CharCreator implements Serializable {
     private ArrayList<String> list = new ArrayList<String>();

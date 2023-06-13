@@ -2,16 +2,12 @@ import java.util.ArrayList;
 
 public class Elf {
 
-    private static int abilityScore;
-    private static String size;
-    private static int speed;
+    private static int abilityScore=3;
+    private static String size="medium";
+    private static int speed=30;
     private static ArrayList<String> abilities = new ArrayList<String>();
 
     public static String highElfStats() {
-
-        abilityScore = 3;
-        size = "medium";
-        speed = 30;
         abilities.add("Darkvision");
         abilities.add("Keen Senses");
         abilities.add("Fey Ancestry");
@@ -26,9 +22,6 @@ public class Elf {
     }
 
     public static String woodElfStats() {
-        size = "medium";
-        abilityScore = 3;
-        speed = 30;
         abilities.add("Darkvision");
         abilities.add("Keen Senses");
         abilities.add("Fey Ancestry");

@@ -2,14 +2,13 @@ import java.util.ArrayList;
 
 public class Wizard {
 
-    private static int roll;
-    private static int hitPoints;
+    private static int hitPoints=6;
     private static ArrayList<String> proficiencies = new ArrayList<String>();
 
     public static String wizardStats() {
 
-        roll = Dice.roll6();
-        hitPoints = 6;
+        int roll = Dice.roll6();
+
         proficiencies.add("Weapons");
         proficiencies.add("Intelligence");
         proficiencies.add("Two of: Arcana, History, Insight, Investigation, Medicine, Religion");

@@ -2,13 +2,12 @@ import java.util.ArrayList;
 
 public class Rogue {
     private static int roll;
-    private static int hitPoints;
+    private static int hitPoints=8;
     private static ArrayList<String> proficiencies = new ArrayList<String>();
 
     public static String rogueStats() {
 
         roll = Dice.roll8();
-        hitPoints = 8;
         proficiencies.add("Armor");
         proficiencies.add("Weapons");
         proficiencies.add("Tools");
